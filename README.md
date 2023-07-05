@@ -1,5 +1,6 @@
 # Rent-A-Car-Desktop-App
-RentACarDatabase
+Rent A Car uygulamasının veritabanını oluştururken temel aldığı talimatlar.
+Instructions on which the Rent A Car application is based when creating its database.
 
 # IN TURKISH
 - Müşterilerin, personelin ve yöneticinin yetkileri farklı olacağından bu 3 varlığa  özel işlemler tanımlanmalı.
