@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E242AD5-7EB0-413A-B78B-F5F390CB2E23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Rent_A_Car_App</RootNamespace>
+    <AssemblyName>Rent A Car App</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdGoreAramaFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdGoreAramaFormu.Designer.cs">
+      <DependentUpon>AdGoreAramaFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaGirisFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaGirisFormu.Designer.cs">
+      <DependentUpon>AnaGirisFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracEkleFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracEkleFormu.Designer.cs">
+      <DependentUpon>AracEkleFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\KimlikDogrula\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DurumGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DurumGuncelle.Designer.cs">
+      <DependentUpon>DurumGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDyeGoreAramaFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDyeGoreAramaFormu.Designer.cs">
+      <DependentUpon>IDyeGoreAramaFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriFormu.Designer.cs">
+      <DependentUpon>MusteriFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriİslemleriFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriİslemleriFormu.Designer.cs">
+      <DependentUpon>MusteriİslemleriFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelAracİslemleriFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelAracİslemleriFormu.Designer.cs">
+      <DependentUpon>PersonelAracİslemleriFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelEklemeFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelEklemeFormu.Designer.cs">
+      <DependentUpon>PersonelEklemeFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelFormu.Designer.cs">
+      <DependentUpon>PersonelFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGirisFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGirisFormu.Designer.cs">
+      <DependentUpon>PersonelGirisFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelMusteriİslemFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelMusteriİslemFormu.Designer.cs">
+      <DependentUpon>PersonelMusteriİslemFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelPersonelİşlemleriFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelPersonelİşlemleriFormu.Designer.cs">
+      <DependentUpon>PersonelPersonelİşlemleriFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlakaGoreAramaFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlakaGoreAramaFormu.Designer.cs">
+      <DependentUpon>PlakaGoreAramaFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifreGuncelleFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifreGuncelleFormu.Designer.cs">
+      <DependentUpon>SifreGuncelleFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoyadGoreAramaFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoyadGoreAramaFormu.Designer.cs">
+      <DependentUpon>SoyadGoreAramaFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCyeGoreAramaFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCyeGoreAramaFormu.Designer.cs">
+      <DependentUpon>TCyeGoreAramaFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelGuncelleFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelGuncelleFormu.Designer.cs">
+      <DependentUpon>TelGuncelleFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UyeGirisFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeGirisFormu.Designer.cs">
+      <DependentUpon>UyeGirisFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YeniUyeGirisFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeniUyeGirisFormu.Designer.cs">
+      <DependentUpon>YeniUyeGirisFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdGoreAramaFormu.resx">
+      <DependentUpon>AdGoreAramaFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaGirisFormu.resx">
+      <DependentUpon>AnaGirisFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracEkleFormu.resx">
+      <DependentUpon>AracEkleFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DurumGuncelle.resx">
+      <DependentUpon>DurumGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDyeGoreAramaFormu.resx">
+      <DependentUpon>IDyeGoreAramaFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriFormu.resx">
+      <DependentUpon>MusteriFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriİslemleriFormu.resx">
+      <DependentUpon>MusteriİslemleriFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelAracİslemleriFormu.resx">
+      <DependentUpon>PersonelAracİslemleriFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelEklemeFormu.resx">
+      <DependentUpon>PersonelEklemeFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelFormu.resx">
+      <DependentUpon>PersonelFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGirisFormu.resx">
+      <DependentUpon>PersonelGirisFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelMusteriİslemFormu.resx">
+      <DependentUpon>PersonelMusteriİslemFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelPersonelİşlemleriFormu.resx">
+      <DependentUpon>PersonelPersonelİşlemleriFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlakaGoreAramaFormu.resx">
+      <DependentUpon>PlakaGoreAramaFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SifreGuncelleFormu.resx">
+      <DependentUpon>SifreGuncelleFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoyadGoreAramaFormu.resx">
+      <DependentUpon>SoyadGoreAramaFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCyeGoreAramaFormu.resx">
+      <DependentUpon>TCyeGoreAramaFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelGuncelleFormu.resx">
+      <DependentUpon>TelGuncelleFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UyeGirisFormu.resx">
+      <DependentUpon>UyeGirisFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeniUyeGirisFormu.resx">
+      <DependentUpon>YeniUyeGirisFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\KimlikDogrula\KPSPublic.wsdl" />
+    <None Include="Connected Services\KimlikDogrula\Rent_A_Car_App.KimlikDogrula.TCKimlikNoDogrulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\KimlikDogrula\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\KimlikDogrula\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\KimlikDogrula\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\KimlikDogrula\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
