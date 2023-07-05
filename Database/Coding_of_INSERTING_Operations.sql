@@ -13,8 +13,9 @@ USE RentACarDatabase
 --Administrator, in all tables, allows the administrator to manipulate data according to the limits of the areas of authority.
 
 --########  Inserting operations ##########
+	
 GO
---INSERTING CUSTOMER / TR: M¸˛teri ekleme talimat˝
+--INSERTING CUSTOMER / TR: M√º√æteri ekleme talimat√Ω
 CREATE PROCEDURE insertCustomer(@TCKN char(11),@NAME char(25), @LNAME char(15), @PASSW nvarchar(20), @PHONE char(10) )
 	AS
 	INSERT INTO Musteriler(TCKN,Musteri_Adi,Musteri_Soyadi,Musteri_Sifre,Musteri_Telefon)
@@ -23,10 +24,10 @@ CREATE PROCEDURE insertCustomer(@TCKN char(11),@NAME char(25), @LNAME char(15), 
 GO
 DROP PROCEDURE insertVehicle
 GO
---INSERTING NEW VEHICLE / TR: Yeni arac˝ araÁ tablosuna ekleme talimat˝
+--INSERTING NEW VEHICLE / TR: Yeni arac√Ω ara√ß tablosuna ekleme talimat√Ω
 CREATE PROCEDURE insertVehicle(@PLATE nvarchar(8),@BRAND_ID int,@MODEL_ID int, @CLASS_ID int, @GEAR_ID int, @FUEL_ID int)
 	AS
-	INSERT INTO Arabalar(Plaka,Marka_ID,Model_ID,Sinif_ID,Vites_ID,Yakit_ID,Durum) -- TR: Tabloyu olu˛tururken durum niteliinin default deerini pasif olarak ayarlayabilirdik. DEFAULT('Pasif')
+	INSERT INTO Arabalar(Plaka,Marka_ID,Model_ID,Sinif_ID,Vites_ID,Yakit_ID,Durum) -- TR: Tabloyu olu√ætururken durum niteli√∞inin default de√∞erini pasif olarak ayarlayabilirdik. DEFAULT('Pasif')
 	VALUES(@PLATE,@BRAND_ID,@MODEL_ID,@CLASS_ID,@GEAR_ID,@FUEL_ID,'Pasif') --We could have set the default value of the state attribute to passive when creating the table. DEFAULT('Passive')
 	
 	UPDATE Modeller_ve_Siniflar  SET Toplam_Adet +=1,Pasif_Adet +=1 where  Model_ID =  @MODEL_ID and Sinif_ID = @CLASS_ID and Vites_ID = @GEAR_ID and Yakit_ID = @FUEL_ID
@@ -34,17 +35,17 @@ CREATE PROCEDURE insertVehicle(@PLATE nvarchar(8),@BRAND_ID int,@MODEL_ID int, @
 GO
 DROP PROCEDURE insertEmployee
 GO
---INTERING NEW EMPLOYEE / TR: Yeni personeli personel tablosuna ekleme talimat˝
+--INTERING NEW EMPLOYEE / TR: Yeni personeli personel tablosuna ekleme talimat√Ω
 CREATE PROCEDURE insertEmployee(@NAME char(25), @LNAME char(15), @PASSW nvarchar(20), @PHONE char(10))
 	AS
 	INSERT INTO Personeller(Personel_Adi,Personel_Soyadi,Personel_Sifre,Personel_Telefon)
 	VALUES (@NAME,@LNAME,@PASSW,@PHONE)
 GO 
 USE RentACarDatabase
-EXEC insertEmployee 'Talha Burak','Ayd˝n','1q2w3e','5050000000'
+EXEC insertEmployee 'Talha Burak','Ayd√Ωn','1q2w3e','5050000000'
 
 GO
---INTERING NEW MANAGER / TR: Yeni yˆneticiyi yˆnetici tablosuna ekleme talimat˝
+--INTERING NEW MANAGER / TR: Yeni y√∂neticiyi y√∂netici tablosuna ekleme talimat√Ω
 CREATE PROCEDURE insertManagaer(@EMP_ID int,@NAME char(25),@LNAME char(20))
 	AS
 	INSERT INTO Yoneticiler(Personel_ID,Yonetici_Adi,Yonetici_Soyadi)
@@ -98,7 +99,7 @@ DROP PROCEDURE insertTrackingForm
 GO
 CREATE PROCEDURE insertTrackingForm(@CUSTOMER_ID int,@TCKN char(11),@PLATE nvarchar(8),@Purchase_Date DATE,@Return_Date DATE,@Service_Fee int)
 	AS
-	INSERT INTO Takip_Formlar˝(Musteri_ID,Musteri_TCKN,Plaka,Alis_Tarihi,›ade_Tarihi,Hizmet_Bedeli)	
+	INSERT INTO Takip_Formlar√Ω(Musteri_ID,Musteri_TCKN,Plaka,Alis_Tarihi,√ùade_Tarihi,Hizmet_Bedeli)	
 	VALUES(@CUSTOMER_ID ,@TCKN ,@PLATE ,@Purchase_Date ,@Return_Date ,@Service_Fee )
 
 	
@@ -165,7 +166,7 @@ EXEC insertModel 30,'Mustang'
 EXEC insertModel 30,'Focus'
 EXEC insertModel 30,'Kuga'
 
-EXEC insertGearType 'D¸z'
+EXEC insertGearType 'D√ºz'
 EXEC insertGearType 'Otomatik'
 
 SELECT * FROM Vites_Tipleri
@@ -177,7 +178,7 @@ SELECT * FROM Yakit_Tipleri
 
 EXEC insertClass 'Ekonomi' --1
 EXEC insertClass 'Medium'	--2
-EXEC insertClass 'L¸ks' --3
+EXEC insertClass 'L√ºks' --3
 EXEC insertClass 'SUV'	--4
 EXEC insertClass '7+'	--5
 
@@ -195,7 +196,7 @@ EXEC insertModelsAndClasses 19,4,2,2,920
 EXEC insertModelsAndClasses 35,4,2,2,2500
 EXEC insertModelsAndClasses 44,4,1,1,1600
 
---3 : L¸ks
+--3 : L√ºks
 EXEC insertModelsAndClasses 28,3,2,2,860
 EXEC insertModelsAndClasses 33,3,1,1,1800
 EXEC insertModelsAndClasses 34,3,1,2,2300
