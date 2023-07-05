@@ -24,7 +24,7 @@ RentACarDatabase
 - Yönetici, bütün tablolarda yöneticinin yetki alanların sınırlarına göre veri manipülasyonu yapabilmesi sağlanır.
   
 
---###############IN ENGLISH
+# IN ENGLISH
 - Since the authorizations of customers, personnel and managers will be different, operations specific to these 3 entities should be defined.
 - These operations are divided into 3 main groups as query, calculation and data manipulations such as "UPDATE, DELETE, INSERT...".
 
